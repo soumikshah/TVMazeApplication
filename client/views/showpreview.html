@@ -1,0 +1,13 @@
+<p ng-if="showglob.length === 0">
+<i>* no results found</i>
+</p>
+<div ng-if="showglob" class="col-md-7 character-block">
+
+		<div ng-repeat="alt in showglob|limitTo:4">
+      	<b>{{alt.show.name}}</b><br/>
+        <img class="centered"  ng-src={{alt.show.image.medium}}><br/>
+				<p ng-bind-html="alt.show.summary|trustHtml"></p>
+
+				  <a href="/shows/{{alt.show.id}}" class="btn -btn-warning">Details</a>
+				</div>
+		</div>

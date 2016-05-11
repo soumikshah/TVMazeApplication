@@ -1,0 +1,71 @@
+<div class="search-header">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+
+        <form>
+          <h2 class="v-center">search</h2>
+          <p class="lead">Find a Show by its name</p>
+
+          <div class="input-group">
+            <input type="text" class="form-control input-md" ng-model="name"/>
+            <span class="input-group-btn">
+            	<button type="submit" class="btn btn-md btn-warning pull-right" ng-click="search()">
+            		search
+            	</button>
+            </span>
+          </div>
+      </form>
+    </div>
+    <p ng-show="showglob.length === 0">
+    <i>* no results found</i>
+    </p>
+  </form>
+
+  <div ng-if="showglob.length" class="more-results-block">
+    <p>
+      /// more results
+      <hr/>
+    </p>
+    <div>
+      <p ng-repeat="alt in showglob">
+        <a style="cursor: pointer" class="h5" ng-click="showglob=alt">
+          {{alt.name}}
+        </a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    <div class="col-md-12">
+      <div show-preview showglob="swap"></div>
+      
+    </div>
+  </div>
+</div>
+</div>
+        <!-- <div ng-if="shownames.length" >
+          <p>
+            /// more results
+            <hr/>
+          </p>
+          <div>
+
+                <p ng-repeat="alt in shownames|limitTo:4">
+                  <a style="cursor: pointer" class="h5" ng-click="shownames=alt">
+                  <img src="{{alt.image.medium}}"/><br/>
+                <b> <a href="/show"> {{alt.name}}</a> </b><br/></a>
+                <!-- <p ng-bind-html="alt.summary|HTMLtoText"></p><br/> -->
+
+<!--
+        </div>
+
+      </div>
+
+      <div class="col-md-1"></div>
+
+      </div>
+  </div>
+</div> -->
