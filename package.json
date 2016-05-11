@@ -1,0 +1,14 @@
+{
+  "name": "tvmaze",
+  "version": "1.0.0",
+  "description": "TVMaze api fetching and showing shows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project#1"
+  ],
+  "author": "Soumik (soumik.shah@gmail.com)",
+  "license": "MIT"
+}
